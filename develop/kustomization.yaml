@@ -1,6 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
 resources:
   - postgres.yaml
   - seed-job.yaml
@@ -9,16 +8,13 @@ resources:
   - test-job.yaml
   - webui.yaml
   - ingress.yaml
-  
 images:
   - name: rhyolite-api
     newName: eyecanai/rhyolite-api
-    newTag: 6eda56299ae8eae91e51d9be3e1feb05365404a8
-
+    newTag: ddc39f1ecd0ecc7795d9aa1bcde99c859f777606
   - name: rhyolite-seed
     newName: eyecanai/rhyolite-seed
     newTag: 6eda56299ae8eae91e51d9be3e1feb05365404a8
-
   - name: rhyolite-webui
     newName: eyecanai/rhyolite-webui
     newTag: a4b34d542fcf451dd85ac18390c297a63c68c8e8

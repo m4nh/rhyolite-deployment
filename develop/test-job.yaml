@@ -11,6 +11,9 @@ metadata:
     # You can also add "BeforeHookCreation" to ensure a fresh start every time
     argocd.argoproj.io/hook-delete-policy: HookSucceeded,BeforeHookCreation
 spec:
+  # Deletes the job 100 seconds after completion, this TTL is useful outside of ArgoCD
+  # in order to clean up completed jobs automatically.
+  ttlSecondsAfterFinished: 100
   backoffLimit: 0
   template:
     spec:

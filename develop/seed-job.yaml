@@ -3,6 +3,11 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: rhyolite-seed
+  annotations:
+    # Tells ArgoCD this is a hook (runs during sync)
+    argocd.argoproj.io/hook: Sync
+    # Optional: Delete the job after it succeeds (replaces ttlSecondsAfterFinished)
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   ttlSecondsAfterFinished: 100  # Deletes the job 100 seconds after completion
   backoffLimit: 1

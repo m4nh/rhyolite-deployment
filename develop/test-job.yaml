@@ -3,6 +3,13 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: rhyolite-test
+  annotations:
+    # Run this job ONLY after the Deployment is healthy
+    argocd.argoproj.io/hook: PostSync
+
+    # Delete the job immediately if it succeeds (keeps cluster clean)
+    # You can also add "BeforeHookCreation" to ensure a fresh start every time
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded,BeforeHookCreation
 spec:
   backoffLimit: 0
   template:

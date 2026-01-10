@@ -4,7 +4,8 @@ kind: Job
 metadata:
   name: rhyolite-seed
 spec:
-  backoffLimit: 3
+  ttlSecondsAfterFinished: 100  # Deletes the job 100 seconds after completion
+  backoffLimit: 1
   template:
     spec:
       restartPolicy: OnFailure

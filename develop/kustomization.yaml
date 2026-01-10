@@ -18,3 +18,6 @@ images:
   - name: rhyolite-webui
     newName: eyecanai/rhyolite-webui
     newTag: b9bc9c70e952abf5335f9ff99b6da5bae0ec1fb3
+  - name: rhyolite-test
+    newName: eyecanai/rhyolite-test
+    newTag: b9bc9c70e952abf5335f9ff99b6da5bae0ec1fb3

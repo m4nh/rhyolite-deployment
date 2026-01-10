@@ -27,7 +27,7 @@ spec:
               echo "API ready."
       containers:
         - name: test
-          image: rhyolite-test:latest
+          image: rhyolite-test
           imagePullPolicy: IfNotPresent
           env:
             - name: API_HOST

@@ -9,7 +9,9 @@ metadata:
     # Optional: Delete the job after it succeeds (replaces ttlSecondsAfterFinished)
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
-  ttlSecondsAfterFinished: 100  # Deletes the job 100 seconds after completion
+  # Deletes the job 100 seconds after completion, this TTL is useful outside of ArgoCD
+  # in order to clean up completed jobs automatically.
+  ttlSecondsAfterFinished: 100
   backoffLimit: 1
   template:
     spec:

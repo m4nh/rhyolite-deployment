@@ -11,13 +11,13 @@ resources:
 images:
   - name: rhyolite-api
     newName: eyecanai/rhyolite-api
-    newTag: 139dac2314bdf51e6ac1a76ecf58b71952b6142e
+    newTag: 78a629c46c239ef061288ea9c8ccd33821f4586c
   - name: rhyolite-seed
     newName: eyecanai/rhyolite-seed
-    newTag: 139dac2314bdf51e6ac1a76ecf58b71952b6142e
+    newTag: 78a629c46c239ef061288ea9c8ccd33821f4586c
   - name: rhyolite-webui
     newName: eyecanai/rhyolite-webui
     newTag: 30afebb91715be4877a6fe34b23d304fe716e04f
   - name: rhyolite-test
     newName: eyecanai/rhyolite-test
-    newTag: 139dac2314bdf51e6ac1a76ecf58b71952b6142e
+    newTag: 78a629c46c239ef061288ea9c8ccd33821f4586c
